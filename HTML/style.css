@@ -1,0 +1,257 @@
+h1, h2{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(163, 109, 15);
+}
+
+
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.sezioneArticoliSuggeriti{
+    background-color: rgba(154, 154, 154, 0.34);
+}
+
+
+body{
+    margin: 0px;
+    /* position: relative; */
+}
+
+
+.navbar{
+    background-color: rgb(199, 189, 52);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav div{
+    justify-content: start;
+}
+
+
+.logoAulab{
+    height: auto;
+    width: 200px;
+}
+
+
+.listaLink{
+    list-style-type: none;
+}
+
+
+.link{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    padding: 7px;
+}
+
+
+nav li:hover{
+    cursor: pointer;
+    border-bottom: 2px solid black;
+
+}
+
+
+.header{
+    background-image: url(./Media/sfondo\ aulab.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    text-align: center;
+}
+
+
+header > h1{
+    font-size: 50px;
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+
+
+.linkHome{
+    text-decoration: none;
+    color: black;
+}
+
+
+.contenitoreArticoliEv_aside{
+    display: flex;
+}
+
+
+.sezioneArticoliEvidenziati{
+    width: 60%;
+}
+
+
+section{
+    display: flex;
+    justify-content: center;
+}
+
+
+.titoloArticoliEvidenziati, .titoloArticoliSuggeriti{
+    text-align: center;
+    font-size: 30px;
+}
+
+
+.titoloArticoliSuggeriti{
+    padding-top: 10px;
+}
+
+
+.articoliEvidenziati, .articoliSuggeriti{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    margin: 10px;
+}
+
+
+.immaginiArticoli{
+    max-width: 100%;
+    height: auto;
+}
+
+
+.btnArticoli{
+    background-color: rgba(90, 81, 51, 0.782);
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+.btnArticoli:hover{
+    background-color: rgb(161, 161, 59);
+    color: black;
+    cursor: pointer;
+}
+
+
+aside{
+    background-color: rgba(216, 216, 87);
+    width: 40%;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+footer{
+    background-color: rgb(129, 129, 60);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+    padding-right: 30px;
+}
+
+
+.listaFooter{
+    list-style: none;
+}
+
+
+.freccia_tornasu{
+    height: 40px;
+    width: auto;
+    animation-name: Icon;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    position: fixed;
+    bottom: 10vh;
+    right: 30px;
+}
+
+
+.freccia_tornasu:hover{
+    cursor: pointer;
+}
+
+
+@keyframes Icon{
+    0%{
+        transform: translateY(50px);
+    }100%{
+        transform : translate(0px);
+    }
+}
+
+
+/* Media query cellulare */
+@media only screen and (max-width: 600px){
+
+    .navbar{
+        display: block;
+    }
+
+
+    .logoAulab{
+        padding-top: 20px;
+        padding-left: 25vw;
+    }
+
+
+    .listaLink{
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+
+    .header{
+        max-height: 70vw;
+    }
+
+
+    .contenitoreArticoliEv_aside{
+        display: block;
+    }
+
+
+    .sezioneArticoliEvidenziati{
+        width: 100%;
+    }
+
+    aside{
+        display: block;
+        width: 100%;
+        margin-left: -10px;
+        margin-right: 0px;
+        padding-right: 0px;
+        text-align: center;
+    }
+    
+
+    section{
+        display: block;
+    }
+
+
+    .articoliEvidenziati, .articoliSuggeriti{
+        display: block;
+        width: auto;
+        text-align: center;
+    }
+
+
+
+    .freccia_tornasu{
+        height: 30px;
+    }
+
+}
