@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selfwork Operatori 4</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let totGatti = prompt('Quanti gatti ci sono?');
+        let gattiPerFila = prompt('Da quanti gatti è formata una fila?');
+
+        let totFile = (totGatti / gattiPerFila);
+
+        let gattiNonInFila = (totGatti % gattiPerFila);
+
+        let gattiMancantiPerFormareFila = (gattiPerFila - gattiNonInFila);
+
+
+
+        console.log(`Ci sono ${totFile.toFixed(0)} file di gatti e ne mancano ${gattiMancantiPerFormareFila} per una nuova fila, con un avanzo di ${gattiNonInFila}`);
+
+        
+
+    </script>
+
+</body>
+</html>
