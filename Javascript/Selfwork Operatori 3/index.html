@@ -10,8 +10,9 @@
 
     <script>
 
-        let num1 = prompt('Scegli un numero');
-        let num2 = prompt('Scegli un altro numero');
+        let num1 = parseInt(prompt('Scegli un numero'));
+        let num2 = parseInt(prompt('Scegli un altro numero'));
+
 
         console.log('I numeri che hai scelto sono ' +num1 +' e ' +num2);
 
@@ -21,7 +22,7 @@
         let divisione = (num1 / num2);
         let potenza = (num1 ** num2);
 
-
+        
         console.log(`Con i numeri da te scelti, i risultati delle varie operazioni sono:\n Somma ${somma} \n Sottrazione ${sottrazione} \n Moltiplicazione ${moltiplicazione} \n Divisione ${divisione.toFixed(2)} \n Potenza ${potenza}`);        
         
 
