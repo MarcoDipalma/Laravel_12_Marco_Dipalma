@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selfwork Cicli 3</title>
+</head>
+<body>
+    
+
+    <script>
+
+        let scelta;
+
+        do{
+            scelta = parseInt(prompt('Inserisci il numero corrispettivo alla tua richiesta: \n 1 - Acqua \n 2 - Coca Cola \n 3 - Birra'));
+
+            switch (true) {
+            case scelta == 1:
+                console.log('ecco la tua acqua');                
+                break;
+            
+            case scelta == 2:
+                console.log('ecco la tua coca cola');                
+                break;
+
+            case scelta == 3:
+                console.log('ecco la tua birra');                
+                break;
+        
+            default:
+                console.log('prodotto non disponibile');
+                
+            }
+
+            
+        } while (scelta < 1 || scelta > 3)     
+        
+
+
+    </script>
+
+
+</body>
+</html>
