@@ -13,7 +13,7 @@
         let scelta;
 
         do{
-            scelta = parseInt(prompt('Inserisci il numero corrispettivo alla tua richiesta: \n 1 - Acqua \n 2 - Coca Cola \n 3 - Birra'));
+            scelta = prompt('Inserisci il numero corrispettivo alla tua richiesta: \n 1 - Acqua \n 2 - Coca Cola \n 3 - Birra');
 
             switch (true) {
             case scelta == 1:
@@ -28,14 +28,17 @@
                 console.log('ecco la tua birra');                
                 break;
         
-            default:
+            case (scelta < 1 || scelta > 3):
                 console.log('prodotto non disponibile');
+                break;
+
+            default:
+                console.log('inserisci un numero');
                 
             }
 
             
-        } while (scelta < 1 || scelta > 3)     
-        
+        } while ((scelta < 1 || scelta > 3) || isNaN(scelta))        
 
 
     </script>
