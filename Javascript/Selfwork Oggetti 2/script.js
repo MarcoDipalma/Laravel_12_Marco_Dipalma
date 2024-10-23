@@ -57,7 +57,7 @@ let rubrica = {
         }
 
     }
-
+    
   }
 
 // rubrica.mostraContatti();
