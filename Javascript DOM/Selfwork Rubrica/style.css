@@ -1,0 +1,26 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+
+p{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.icon{
+    cursor: pointer;
+}
+
+
+.card-contact{
+    box-shadow: 2px 2px 5px white, -2px -2px 5px white;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
