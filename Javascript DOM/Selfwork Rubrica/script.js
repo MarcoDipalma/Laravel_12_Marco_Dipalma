@@ -64,6 +64,7 @@ let rubrica = {
                 contatto.phone_number = number;
 
             }
+            rubrica.showContacts();
         });
         
     },
