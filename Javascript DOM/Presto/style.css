@@ -1,0 +1,297 @@
+*{
+    font-family: "Radley", serif;    
+}
+
+
+h1, h2, h3, h4, .h1, .h2, .h3, .h4{
+    font-family: "Sedan SC", serif;
+}
+
+
+:root{
+    --green: rgb(19, 42, 19);
+    --white: rgb(218, 215, 205);
+    --black: rgb(23, 23, 23);
+    --brown: rgb(127, 79, 36);
+}
+
+.bg-g{
+    background-color: var(--green);
+}
+
+.bg-b{
+    background-color: var(--black);
+}
+
+.bg-w{
+    background-color: var(--white);
+}
+
+.bg-br{
+    background-color: var(--brown);
+}
+
+.text-g{
+    color: var(--green);
+}
+
+.text-b{
+    color: var(--black);
+}
+
+.text-w{
+    color: var(--white);
+}
+
+.text-br{
+    color: var(--brown);
+}
+
+body{
+    background-color: var(--green);
+    color: var(--white);
+}
+
+/* Navbar */
+.navbar{
+    height: 100px;
+    transition: 0.5s;
+}
+
+.nav-link:hover{
+    color: var(--brown) !important ;
+    text-shadow: 2px 2px 5px var(--brown);
+}
+
+.logo{
+    width: 60px;
+    transition: 0.5s;
+}
+
+#dropdown{
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* Header */
+
+.btn-custom{
+    color: var(--brown);
+    background-color: var(--black);
+    border: 2px solid var(--brown);
+    border-radius: 50px;
+    margin: 0px 15px;
+    padding: 20px 30px;
+    transition: 0.5s;
+}
+
+.btn-custom:hover{
+    color: var(--black);
+    background-color: var(--brown);
+    border: 2px solid var(--black);
+    transform: scale(1.1);
+}
+
+/* Positioned */
+.positioned{
+    position: relative;
+    top: -150px;
+}
+
+.col-custom{
+    padding: 10px;
+    border: 2px solid var(--black);
+    cursor: pointer;
+    transition: 0.5s;
+    color: var(--black);
+}
+
+.col-custom:hover{
+    transform: scale(1.1);
+    background-color: var(--black);
+    color: var(--white);
+    border: 2px solid var(--brown);
+}
+
+@media screen and (max-width: 600px) {
+    .positioned{
+        position: static;
+    }
+    
+}
+
+/* Numeri incrementali */
+
+.imgNumeriIncrementali{
+    width: 100%;
+}
+
+.number{
+    font-family: "Sedan SC", serif;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+/* swiper */
+
+.swiper{
+    height: 600px;
+}
+
+.card-review{
+    height: 300px;
+    width: 500px;
+    border: 2px solid var(--brown);
+    border-radius: 20px;
+}
+
+.swiper-slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Pagina annunci */
+
+.titoloPagina{
+    margin-top: 110px;
+    text-align: center;
+}
+
+
+.accordion-item, .accordion-button{
+    background-color:var(--black);
+    color: var(--white);
+}
+
+.accordion-button:not(.collapsed){
+    color: var(--white);
+    background-color: var(--black);
+    box-shadow: none;
+}
+
+.accordion-button:focus{
+    box-shadow: none;
+}
+
+.card-custom{
+    width: 30%;
+    border: 2px solid var(--brown);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.imgCard{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+
+/* Pagina chi siamo */
+
+.circle{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 2px solid var(--brown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.opener{
+    height: 77px;
+    width: 77px;
+    border-radius: 50%;
+    color: var(--white);
+    /* border: 2px solid var(--brown); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 3;
+    background-color: var(--green);
+    cursor: pointer;
+}
+
+#iconOpener{
+    transition: 1s;
+}
+
+.moved{
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    /* border: 2px solid var(--brown); */
+    position: absolute;
+    z-index: 2;
+    transition: 0.5s;
+    background-position: center;
+    background-size: 100%;
+    cursor: pointer;
+}
+
+.vh-75{
+    height: 75vh;
+}
+
+.flip-card{
+    height: 480px;
+    width: 250px;
+    transition: 0.5s;
+}
+
+.flip-card:hover > .inner{
+    transform: rotateY(180deg);
+}
+
+.inner{
+    height: 100%;
+    width: 100%;
+    border: 2px solid var(--brown);
+    border-radius: 20px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+}
+
+.inner-face{
+    height: 480px;
+    width: 250px;
+    background-position: center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.inner-back{
+    height: 480px;
+    width: 250px;
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    text-align: center;
+    padding: 15px;
+}
+
+@media screen and (max-width: 600px) {
+    .circle{
+        margin-top: 50px;
+    }
+
+    .inner{
+        margin-top: 50px;
+    }
+
+    #cardWrapper{
+        justify-content: center;
+    }
+    
+}
