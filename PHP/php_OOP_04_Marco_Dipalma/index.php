@@ -64,7 +64,8 @@ class Opel extends Car {
 
         echo "La mia macchina è " . $this->name . " con targa " . $this->plate . " e numero di telaio ";
         
-        Car::numeroTelaio();
+        $this->numeroTelaio();
+        
 
     }
 
