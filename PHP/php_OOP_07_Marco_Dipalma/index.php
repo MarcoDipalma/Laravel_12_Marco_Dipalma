@@ -11,6 +11,7 @@ class IronMan{
     public $armDx;
     public $legs;
     public $head;
+    public static $counter = 0;
 
     public function __construct(Legs $_legs, Head $_head, Arm $_armSx = new Razzi(), Arm $_armDx = new RaggiLaser){
 
@@ -19,6 +20,7 @@ class IronMan{
         $this->legs = $_legs;
         $this->head = $_head;
 
+        self::$counter++;
         
 
     }
@@ -49,8 +51,9 @@ $ironMan4 = new IronMan(new Propulsori(), new Jarvis(), new Razzi(), new RaggiLa
 $ironMan5 = new IronMan(new Corsa(), new Jarvis());
 
 var_dump($ironMan1);
-var_dump($ironMan2);
-var_dump($ironMan3);
+
+echo "\nCi sono " . IronMan::$counter . " IronMan\n";
+
 
 
 // $ironMan1->attaccareSx();
