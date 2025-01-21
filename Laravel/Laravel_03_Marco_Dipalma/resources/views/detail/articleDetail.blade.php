@@ -21,12 +21,7 @@
                 <a class="nav-link text-white" aria-current="page" href="{{route('homepage')}}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="{{route('chiSiamo')}}">Chi siamo</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white" href="{{route('servizi')}}">
-                  Servizi
-                </a>
+                <a class="nav-link text-white" href="{{route('indice')}}">Indice</a>
               </li>
             </ul>
           </div>
@@ -39,28 +34,35 @@
     <!-- Header -->
 
     <header class="container-fluid">
-        <div class="row justify-content-center">
+        <div class="row header">
             <div class="col-12">
-                <h1 class="text-center text-white mt-2 mb-5"> Dettaglio</h1>
-                <h2 class="text-center text-white mt-2 mb-5"> {{$reporter['surname'] . ' ' . $reporter['name']}} </h2>
-
+                <h1 class="display-1 text-center text-white">Dettaglio articolo</h1>
             </div>
-
-            <div class="col-12 col-md-4">
-                <img src="https://picsum.photos/30{{$reporter['id']}}" alt="immagine casuale">
-            </div>
-
-            <div class="col-12 col-md-4">
-                <h3>{{$reporter['article']}}</h3>
-
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ducimus aperiam ex voluptatum quos sapiente veritatis tenetur corporis eveniet et maiores enim sunt error, necessitatibus explicabo suscipit, beatae molestias optio?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni eos perspiciatis quae tempore? Aliquam, odio cum corporis libero veritatis sapiente, veniam error voluptatum voluptate ullam sed dignissimos inventore eveniet autem.
-                </p>
-            </div>
-
         </div>
 
+        <div class="container">
+            <div class="row justify-content-center mt-5">
+                <div class="col-12 col-md-4">
+                <img src="https://picsum.photos/30{{$article['id']}}" alt="immagine casuale">
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <h3>Servizio di: {{$article['subject']}}</h3>
+                    <p class="lead">{{$article['surname'] . ' ' . $article['name']}}</p>
+
+                    <p class="mt-3">
+                        {{$article['article']}}
+                    </p>
+
+                </div>
+            </div>
+        </div>
         
+
+
+
+
+
 
     </header>
 
