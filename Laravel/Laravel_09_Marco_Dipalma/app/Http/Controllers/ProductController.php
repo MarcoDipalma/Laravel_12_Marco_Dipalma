@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Http\Requests\ProductRequest;
 
 class ProductController extends Controller
 {
@@ -12,21 +13,23 @@ class ProductController extends Controller
         return view('form');
     }
 
-    public function store(Request $request){
+    public function store(ProductRequest $request){
         // dd($request->all());
 
-        // $name = $request->name;
-        // $price = $request->price;
-        // $product = new Product();
-        // $product->name = $name;
-        // $product->price = $price;
+        $name = $request->name;
+        $price = $request->price;
+        $img = null;
+        
+        if($request->file('img')){
+            $img=$request->file('img')->store('img', 'public');
+        }
 
-        // $product->save();
 
 
         $product = Product::create([
-            'name' => $request->name,
-            'price' => $request->price,
+            'name' => $name,
+            'price' => $price,
+            'img'=>$img,
         ]);
 
         // dd($product);

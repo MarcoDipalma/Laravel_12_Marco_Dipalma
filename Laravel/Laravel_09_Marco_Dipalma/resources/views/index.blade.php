@@ -16,7 +16,11 @@
                 <div class="col-6 col-md-3">
                     
                     <div class="card mb-3" style="width: 18rem;">
-                        <img src="https://picsum.photos/200" class="card-img-top" alt="immagine casuale">
+                        @if (!$product->img)
+                        <img src="https://picsum.photos/200" class="card-img-top" alt="immagine casuale">                            
+                        @else
+                        <img src="{{Storage::url($product['img'])}}" class="card-img-top" alt="immagine form">
+                        @endif
                         <div class="card-body">
                             <h5 class="card-title">{{$product['name']}}</h5>
                             <p class="card-text text-b">€{{$product['price']}}</p>
