@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\ArticleRequest;
 use App\Http\Requests\ArticleEditRequest;
 
@@ -31,6 +32,8 @@ class ArticleController extends Controller
      */
     public function store(ArticleRequest $request)
     {
+        // dd(Auth::user()->id);
+        
         $title = $request->title;
         $subtitle = $request->subtitle;
         $body = $request->body;
@@ -47,6 +50,7 @@ class ArticleController extends Controller
             'subtitle' => $subtitle,
             'body' => $body,
             'img'=>$img,
+            'user_id'=> Auth::user()->id
         ]);
 
         // dd($product);

@@ -10,6 +10,16 @@ class Article extends Model
         'title',
         'subtitle',
         'body',
-        'img'
+        'img',
+        'user_id'
     ];
+
+
+    // Get the user that owns the article
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }
