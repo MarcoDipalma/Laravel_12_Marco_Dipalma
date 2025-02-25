@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(33, 37, 41);
+    background-image: url(../backgroundimg2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+h1, h2, h3, h4, p, label, li{
+    color: white;
+}
+
+.margin-custom{
+    margin-top: 70px;
+    position: fixed;
+    width: 100%;
+}
