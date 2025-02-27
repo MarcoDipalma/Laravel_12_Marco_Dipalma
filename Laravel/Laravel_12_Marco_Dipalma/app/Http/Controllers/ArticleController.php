@@ -99,6 +99,9 @@ class ArticleController extends Controller
      */
     public function destroy(Article $article)
     {
+
+        $article->tags()->detach();
+
         $article->delete();
 
         return redirect()->route('article.index')->with('status', 'Articolo eliminato con successo');
